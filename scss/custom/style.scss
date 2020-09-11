@@ -1,0 +1,88 @@
+@import "../bootstrap/bootstrap.scss"; // CSS reset
+@import "_reset"; // CSS reset
+@import "_variables"; // CSS variables
+
+
+
+:root {
+    --color-page-background: #{$primaryColor};
+    --color-text: #{$primaryTxt};
+    --color-point: #{$primaryPointColor};
+  }
+
+
+  body {
+    background-color: var(--color-page-background);
+    color: var(--color-text);
+  }
+
+  a {
+    color: var(--color-text);
+  }
+
+  section {
+    height:50vh;
+  }
+
+  // Vendor Prefixes
+  @mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+  }
+
+  .myBox {
+    transform: rotate(20deg);
+  }
+  
+  .custom-nav {
+    @include media-breakpoint-up(md) {
+    position: sticky;
+    top: 0;
+    z-index: 1071; // over everything in bootstrap
+  }
+}
+
+  // checkbox for changing theme
+
+  .switch_input{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  
+  .switch_label {
+    cursor: pointer;
+    margin-bottom:0;
+    text-indent: -9999px;
+    width: 60px;
+    height: 30px;
+    background: var(--color-point);
+    border-radius: 100px;
+    position: relative;
+  }
+  
+  .switch_label:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border-radius: 24px;
+    transition: 0.3s;
+  }
+  
+  .switch_input:checked + .switch_label {
+    background: var(--color-point);
+  }
+  
+  .switch_input:checked + .switch_label:after {
+    left: calc(100% - 4px);
+    transform: translateX(-100%);
+  }
+  
+
+  // secondary color mode
+@import '_secondary'; // CSS variables for secondary mode
