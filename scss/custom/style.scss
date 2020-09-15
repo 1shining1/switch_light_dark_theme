@@ -1,12 +1,14 @@
 @import "../bootstrap/bootstrap.scss"; // CSS reset
 @import "_reset"; // CSS reset
 @import "_variables"; // CSS variables
+@import "_main"; // CSS main
 
 
 
 :root {
     --color-page-background: #{$primaryColor};
     --color-text: #{$primaryTxt};
+    --color-text2: #{$primaryTxt2};
     --color-point: #{$primaryPointColor};
   }
 
@@ -14,15 +16,29 @@
   body {
     background-color: var(--color-page-background);
     color: var(--color-text);
+    height: 5000px;
+    overflow-x: hidden;
   }
+
+
+  header {
+    background-color: var(--color-page-background);
+  }
+
 
   a {
     color: var(--color-text);
+    &:hover {
+      color: var(--color-text2);
+      @include transition (all .6s);
+    }
   }
 
-  section {
-    height:50vh;
+  ::selection {
+    background:var(--color-text2);
+    color: var(--color-page-background);
   }
+
 
   // Vendor Prefixes
   @mixin transform($property) {
@@ -82,6 +98,14 @@
     left: calc(100% - 4px);
     transform: translateX(-100%);
   }
+
+
+  // common 
+  .dropdown-item.active, .dropdown-item:active {
+    color : #222;
+    background-color: #eee;
+  }
+  
   
 
   // secondary color mode

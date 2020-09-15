@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/jquery_3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/typeWriter.js"></script>
     <title>sass test</title>
 </head>
 <body>
     <!-- 
-    
     <h1>Theme Switch</h1>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi repellendus veniam dolorem aliquid iure praesentium debitis repudiandae possimus perferendis provident? Facilis harum eos ut explicabo sint suscipit maiores corporis perspiciatis.</p> -->
-    
 
     <div class="skippy overflow-hidden">
         <div class="container-xl">
@@ -89,17 +89,36 @@
             <!-- <div class="switch_marker"></div> -->
         </div><!-- switch End -->
     </header>
-    <div class="container-fluid">
-        <section class="jumbotron text-center">
-            <div class="container">
-              <h1 class="jumbotron-heading">Album example</h1>
-              <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-              <p>
-                <a href="#" class="btn btn-primary my-2">Main call to action</a>
-                <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-              </p>
-            </div>
-          </section>
+    <!-- <div id="nicescroll-box">
+      <div class="wrap"> -->
+    <div class="container-fluid section01">
+      <section class="jumbotron row text-center main_visual mb-0">
+        <div class="container d-flex align-items-center">
+          <div>
+            <h1 class="jumbotron-heading">Change color theme</h1>
+            <p class="lead">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+            <p>
+              <a href="#" class="btn btn-primary my-2">Main call to action</a>
+              <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+            </p>
+          </div>
+        </div>
+      </section><!-- main_visual End -->
     </div>
+    <div class="container-fluid section02">
+      <section class="row">
+        <div class="w-100 my-5 my-md-9 p-5">
+          <h1>Turn your ideas into a
+            <span class="txt-type" data-wait="3000" data-words='["future","success","startup"]'></span>
+            </h1>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+        </div>
+      </section><!-- main_visual End -->
+    </div>
+    
+
+  <!-- </div>
+</div> -->
+<!-- nicescroll-box End-->
 </body>
 </html>
